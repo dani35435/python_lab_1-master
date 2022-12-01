@@ -1,7 +1,6 @@
 {% extends "polls/basic.html" %}
 {% block content %}
-{% if user.is_authenticated %}
+
     <h2>Добро пожаловать в профиль</h2>
-    <img class="img" src="media/{{ photo_file }}">
-{% endif %}
+    <img class="img" src="{{ user.photo_file.url }}">
 {% endblock %}
